@@ -5,7 +5,7 @@ import pytest
 import os
 
 # Configuration assuming default local ports
-API_URL = "http://localhost:8000/api/notifications"
+API_URL = "http://localhost:8002/api/notifications"
 DB_DSN = "postgres://user:password@localhost:5432/notification_db"
 
 def get_db_connection():
@@ -14,7 +14,7 @@ def get_db_connection():
 def test_end_to_end_flow():
     # Only run if services are up (This is a manual integration test helper)
     try:
-        requests.get("http://localhost:8000/health")
+        requests.get("http://localhost:8002/health")
     except requests.exceptions.ConnectionError:
         pytest.skip("API not running. Start docker-compose to run integration tests.")
 

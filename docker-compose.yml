@@ -32,7 +32,7 @@ services:
       context: .
       dockerfile: api_service/Dockerfile
     ports:
-      - "8000:8000"
+      - "8002:8000"
     environment:
       DATABASE_URL: postgres://user:password@db:5432/notification_db
       RABBITMQ_URL: amqp://user:password@rabbitmq:5672/

@@ -39,7 +39,7 @@ This service decouples notification requests from delivery using a message queue
     ```bash
     docker-compose up --build
     ```
-4.  The API will be available at `http://localhost:8000`.
+4.  The API will be available at `http://localhost:8002`.
 5.  Management UI for RabbitMQ at `http://localhost:15672` (User: guest, Pass: guest).
 
 ## API Documentation
@@ -91,7 +91,7 @@ To manually verify integration:
 1.  Start services with `docker-compose up`.
 2.  Send a POST request to the API.
     ```bash
-    curl -X POST http://localhost:8000/api/notifications \
+    curl -X POST http://localhost:8002/api/notifications \
     -H "Content-Type: application/json" \
     -d '{"recipient": "test@test.com", "subject": "Test", "message": "Body"}'
     ```
